@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mainGame">
+      <div class="winnerContainer">
+        <div class="winnerMes">
+          <div>You Won</div>
+          <button type="button">Ok</button>
+        </div>
+      </div>
+
+      <div class="playAgainContainer">
+        <div class="playAgain">
+          <h3>Play again!</h3>
+          <div class="playAgainBtn">
+            <button type="button" id="green">Yes</button>
+            <button type="button" id="red">No</button>
+          </div>
+        </div>
+      </div>
+      <p>Cumulative score</p>
+      <section class="scoreBoardSection">
+        <div class="scoreBoard">
+          <div class="playerScore">
+            <h2>You</h2>
+            <p>0</p>
+          </div>
+          <div class="computerScore">
+            <h2>Computer</h2>
+            <p>0</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pickerSection">
+        <div class="playerPickContainer">
+          <h2>You</h2>
+          <div class="rock">✊</div>
+          <div class="paper">🖐</div>
+          <div class="scissors">✌</div>
+        </div>
+      </section>
+
+      <section class="computerSection">
+        <h2>Computer</h2>
+        <div class="countDown"></div>
+        <div class="computerSelect">✌</div>
+      </section>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
