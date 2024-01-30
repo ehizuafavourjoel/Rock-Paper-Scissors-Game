@@ -7,6 +7,24 @@ const computerChoiceImg = document.querySelector('.computerSelect')
 let myCountDown = document.querySelector('.countDown');
 const replayBtn = document.querySelectorAll('.playAgainBtn button')
 
+const resetBtn = document.querySelector('.gameResetBtn');
+resetBtn.addEventListener('click', () => {
+    document.querySelector('.playAgainContainer').style.display = 'block'
+})
+
+for (let i = 0; i < 2; i++) {
+    {
+        replayBtn[i].addEventListener('click', () => {
+            if (i === 0) {
+                localStorage.clear()
+                location.reload()
+            }
+            else {
+                document.querySelector('.playAgainContainer').style.display = 'none'
+            }
+        })
+    }
+}
 
 
 console.log('hey')
@@ -126,7 +144,7 @@ for (let i = 0; i < myOptions.length; i++) {
                 document.querySelector('.winnerMes button').addEventListener('click', () => {
 
                     document.querySelector('.winnerContainer').style.display = 'none'
-                    document.querySelector('.playAgainContainer').style.display = 'block'
+                    location.reload()
 
 
                 })
@@ -145,7 +163,7 @@ for (let i = 0; i < myOptions.length; i++) {
                 }, 500)
                 document.querySelector('.winnerMes button').addEventListener('click', () => {
                     document.querySelector('.winnerContainer').style.display = 'none'
-                    document.querySelector('.playAgainContainer').style.display = 'block'
+                    location.reload()
                 })
 
             }
@@ -156,7 +174,7 @@ for (let i = 0; i < myOptions.length; i++) {
                 }, 1000)
                 document.querySelector('.winnerMes button').addEventListener('click', () => {
                     document.querySelector('.winnerContainer').style.display = 'none'
-                    document.querySelector('.playAgainContainer').style.display = 'block'
+                    location.reload()
                 })
                 console.log(winner)
             }
@@ -170,24 +188,7 @@ for (let i = 0; i < myOptions.length; i++) {
 
 
         console.log(winner)
-        for (let i = 0; i < 2; i++) {
-            {
-                replayBtn[i].addEventListener('click', () => {
-                    if (i === 0) {
-                        location.reload()
-                    }
-                    else {
-                        document.querySelector('.playAgainContainer').style.display = 'none'
-                        document.querySelector('.winnerContainer .winnerMes div').innerText = 'Are you sure you want to quit';
-                        document.querySelector('.winnerContainer').style.display = 'block';
-                        document.querySelector('.winnerContainer .winnerMes button').addEventListener('click', () => {
-                            window.close()
-                        })
-                        window.close()
-                    }
-                })
-            }
-        }
+
     })
 }
 
